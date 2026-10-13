@@ -22,14 +22,14 @@ class ExerciseFactory extends Factory
     {
         return [
             'learning_stage_id' => LearningStage::factory(),
-            'level' => fake()->randomElement(ExerciseLevel::cases()),
+            'level' => $this->faker->randomElement(ExerciseLevel::cases()),
             'type' => ExerciseType::DragOrder,
-            'position' => fake()->numberBetween(1, 5),
-            'title' => fake()->sentence(3),
-            'description' => fake()->paragraph(),
+            'position' => $this->faker->numberBetween(1, 5),
+            'title' => $this->faker->sentence(3),
+            'description' => $this->faker->paragraph(),
             'instruction' => 'Susun langkah-langkah berikut ke dalam urutan yang tepat.',
-            'objective' => fake()->sentence(),
-            'answer_guide' => fake()->paragraph(),
+            'objective' => $this->faker->sentence(),
+            'answer_guide' => $this->faker->paragraph(),
             'key_points' => [
                 'Langkah awal jelas',
                 'Ketergantungan logis terpenuhi',
@@ -46,7 +46,7 @@ class ExerciseFactory extends Factory
                 ['id' => 'b3', 'label' => 'Langkah ketiga'],
             ],
             'answer_key' => ['b1', 'b2', 'b3'],
-            'explanation' => fake()->paragraph(),
+            'explanation' => $this->faker->paragraph(),
             'is_active' => true,
         ];
     }

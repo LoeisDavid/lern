@@ -18,11 +18,11 @@ class LearningStageFactory extends Factory
     public function definition(): array
     {
         return [
-            'number' => fake()->unique()->numberBetween(1, 100),
-            'slug' => fake()->unique()->slug(),
-            'name' => fake()->words(3, true),
-            'goal' => fake()->sentence(),
-            'summary' => fake()->sentence(),
+            'number' => $this->faker->unique()->numberBetween(1, 100),
+            'slug' => $this->faker->unique()->slug(),
+            'name' => $this->faker->words(3, true),
+            'goal' => $this->faker->sentence(),
+            'summary' => $this->faker->sentence(),
             'skills' => [
                 'Mengurutkan langkah secara logis',
                 'Menganalisis masalah dan batasan',

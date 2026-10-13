@@ -68,7 +68,7 @@ class LearningStageSeeder extends Seeder
         foreach ($stages as $data) {
             LearningStage::updateOrCreate(
                 ['number' => $data['number']],
-                LearningStage::factory()->raw($data)
+                $data
             );
         }
     }
